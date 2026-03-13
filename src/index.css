@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+/* Blog Karten Animation */
+.blog-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+/* Buttons weicher */
+.btn {
+  border-radius: 8px;
+}
+
+/* Karten runder */
+.card {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* Bilder schöner */
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Modernere Buttons */
+.btn {
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+/* Primary Button moderner Farbverlauf */
+.btn-primary {
+  background: linear-gradient(135deg, #4f8cff, #6f42c1);
+  border: none;
+  box-shadow: 0 4px 10px rgba(79,140,255,0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(79,140,255,0.35);
+}
+
+/* Outline Buttons moderner */
+.btn-outline-secondary {
+  border-width: 2px;
+}
+
+.btn-outline-secondary:hover {
+  transform: translateY(-2px);
+}
+
+/* Kleine Buttons */
+.btn-sm {
+  border-radius: 10px;
+  padding: 6px 14px;
+}
+
+/* Seite füllt immer die Höhe */
+html, body, #root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hauptinhalt wächst automatisch */
+main {
+  flex: 1;
+}
+
+/* ===== MODERNE BUTTONS ===== */
+
+.btn {
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(13,110,253,0.25);
+}
+
+.btn-outline-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(108,117,125,0.2);
+}
+
+/* ===== BLOG CARDS HOVER ===== */
+
+.blog-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* ===== IMAGE ZOOM ===== */
+
+.card-img-top {
+  transition: transform 0.4s ease;
+}
+
+.blog-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* ===== NAVBAR LINKS ===== */
+
+.navbar .nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #0d6efd;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* ===== READ MORE BUTTON ===== */
+
+.read-more-btn {
+  transition: all 0.2s ease;
+}
+
+.read-more-btn:hover {
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+}
+
+/* Footer Links Styling */
+.footer-link {
+  color: #adb5bd;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Modernere About Cards */
+.about-card {
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
