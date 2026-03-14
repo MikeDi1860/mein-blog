@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import posts from "../data/posts";
+import posts from "../data/posts.jsx";
 import Comments from "../components/Comments"; // <-- Import hier
 
 export default function PostDetail() {
