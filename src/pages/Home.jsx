@@ -3,11 +3,11 @@ import LatestPosts from "../components/LatestPosts";
 
 function Home() {
   return (
-    <>
+    <> 
       <HeroSection />
       <LatestPosts />
     </>
   );
 }
 
-export default Home;
+export default Home;     
