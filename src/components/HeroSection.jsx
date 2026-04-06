@@ -8,14 +8,16 @@ export default function HeroSection() {
 
           {/* Textbereich */}
           <div className="col-lg-6">
-            <h1 className="display-4 fw-bold mb-4">
-              Mein Entwickler-Blog
+            <h1 className="display-4 fw-bold mb-2">
+              UX Build
             </h1>
 
-            <p className="lead text-muted mb-4">
-              Tutorials, Erfahrungen und praktische Tipps aus meiner Reise
-              als Webentwickler. Ich dokumentiere hier mein Lernen von
-              React, JavaScript und modernen Webtechnologien.
+            <h2 className="display-8 mb-4">
+              Der neue Blog von Michael Dietl
+            </h2>
+
+            <p className="lead text-muted mb-4 me-md-4">
+              Geschichten und Informationen rund ums selber bauen von Anwendungen und Webseiten
             </p>
 
             <div className="d-flex gap-3">

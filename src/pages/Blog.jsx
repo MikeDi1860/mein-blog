@@ -46,8 +46,8 @@ export default function Blog() {
               />
 
               <div className="card-body">
-                <h5 className="card-title">{post.title}</h5>
-                <p className="card-text">{post.excerpt}</p>
+                <h5 className="card-title fw-bold">{post.title}</h5>
+                <p className="card-text fs-6">{post.excerpt}</p>
                 <p className="text-muted small">{post.date}</p>
               </div>
 

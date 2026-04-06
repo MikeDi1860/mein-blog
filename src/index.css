@@ -2,6 +2,14 @@
 
 body {
   margin: 0;
+  font-family: 'Source Serif 4', serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Inter', sans-serif;
+ /* font-weight: 700;*/
 }
 
 html, body, #root {
@@ -145,6 +153,40 @@ main {
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
 }
 
+/* 1. Spacing for paragraphs */
+.article-body p {
+    margin-bottom: 1.5rem; /* Etwas reduziert für besseren Fluss */
+    margin-top: 0;         /* Sicherstellen, dass oben nichts drückt */
+}
+
+/* 2. Spacing for images */
+.article-body img {
+    /* WICHTIG: margin-top auf 0 oder einen kleinen Wert setzen! */
+    margin-top: 0.5rem;    
+    margin-bottom: 2.5rem; /* Der Hauptabstand kommt nach dem Bild */
+    display: block;
+}
+
+/* 3. Spacing for headings (H2, H3, H4) */
+/* Diese dürfen als einzige nach OBEN drücken, um sich vom vorherigen Text abzugrenzen */
+/* Zusammengefasste Regel für Artikel-Überschriften */
+.article-body h2, 
+.article-body h3, 
+.article-body h4 {
+    font-weight: 700 !important;
+    margin-top: 3rem;
+    margin-bottom: 1.2rem;
+}
+
+/* 4. Abstände für Listen, falls du welche nutzt */
+.article-body ul, .article-body ol {
+    margin-bottom: 2rem;
+}
+
+.article-body li {
+    margin-bottom: 0.5rem; /* Kleiner Abstand zwischen Listenpunkten */
+}
+
 /* Format for Images in posted articles */
 .tech-image {
   max-width: 600px;
@@ -152,6 +194,7 @@ main {
   border-radius: 16px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
+  margin: 0.5rem auto 2.5rem auto; /* macht die Bilder im Artikel mittig!!!!*/
 }
 
 /* Hover Effekt */
@@ -172,6 +215,33 @@ main {
 
 /* ===== Obsolete ===== */
 /*
+/* Limitiert nur den Text-Inhalt, nicht die ganze Karte oder das Bild 
+.post-content-render {
+    max-width: 660px; Die magische Zahl für Lesbarkeit 
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;  Angenehmer Zeilenabstand 
+}
+*/
+/* Sorgt dafür, dass Bilder im Text nicht gestaucht werden */
+/*.post-content-render img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+}
+.article-content {
+  max-width: 650px;
+  /*margin: 0 auto;
+}
+
+.article-content p {
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 1.4rem;
+}
+/*
+
 .btn {
   transition: all 0.2s ease-in-out;
   font-weight: 500;

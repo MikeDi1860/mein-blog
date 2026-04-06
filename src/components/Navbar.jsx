@@ -7,7 +7,7 @@ export default function Navbar() {
             <div className="container">
 
                 <Link className="navbar-brand" to="/">
-                    Mein Blog
+                    U X B
                 </Link>
 
                 <div className="navbar-nav flex-row">
