@@ -120,10 +120,10 @@ const posts = [
   },
   {
     id: 2,
-    title: "Setup und Installation meines Blogs",
+    title: "Blog Setup und Installation",
     excerpt: "Schritt für Schritt..",
     date: "2026-03-03",
-    image: "https://picsum.photos/600/400?random=2",
+    image: "/Screenshot Vite & React.png",
     tags: ["Node.js", "npm", "GitHub"],
     content: (
        <>
@@ -207,7 +207,7 @@ const posts = [
         <p>
           Danach wird jede Änderung automatisch veröffentlicht, sobald sie auf GitHub gepusht wird.
         </p>
-
+         
         <h2 className="mt-5">Fazit</h2>
 
         <p>
@@ -222,7 +222,7 @@ const posts = [
     title: "Blog Design Verbesserungen",
     excerpt: "So hab ich das Design verbessert: moderne UI-Optimierungen einfach erklärt",
     date: "2026-03-03",
-    image: "https://picsum.photos/600/400?random=3",
+    image: "/Blog-Design-Feinschliff.png",
     tags: ["Design", "UI", "CSS"],
     content: (
       <>
@@ -295,14 +295,31 @@ const posts = [
         <h3 className="mt-4">2. Buttons modernisiert</h3>
 
         <p>
-          Die Standard-Buttons wurden durch eigene Styles ersetzt:
+          Die Standard-Bootstrap Buttons wurden durch eigene Styles aufgepimpt:
         </p>
 
         <ul>
           <li>abgerundete Ecken</li>
-          <li>angepasste Abstände</li>
-          <li>subtile Animationen</li>
+          <li>optimierte Abstände</li>
+          <li>angenehmer Farbverlauf</li>
+          <li>moderne Icons eingebaut</li>
         </ul>
+
+          <div className="text-center my-5">
+           <figure className="tech-figure">
+            <img
+              src="/pimped primary & secondary btn.png"
+              alt= "Buttons pimped"
+              className = "img-fluid mb-4 tech-image"
+              style={{ maxWidth: '50% !important', width: '50%' }}
+              />
+           </figure>
+            <figcaption className="text-muted mt-0">
+              "Das sind die von mir mit CSS gestylten Primary und Secondary Buttons"
+            </figcaption>
+          </div>
+
+
 
         <h3 className="mt-4">3. Navbar verbessert</h3>
 
@@ -317,8 +334,10 @@ const posts = [
         </p>
 
         <ul>
-          <li>mehr Weißraum</li>
-          <li>bessere Lesbarkeit von Texten</li>
+          <li>mehr Whitespace (Leerraum zwischen den Elementen)</li>
+          <li>bessere Lesbarkeit von Texten (u.a. durch Optimierung der Zeilenhöhe
+              und der Textbreite - darauf gehe ich in meinem nächsten Artikel noch
+              genauer ein)</li>
           <li>klarere Hierarchie</li>
         </ul>
 
