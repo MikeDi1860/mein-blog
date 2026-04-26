@@ -1,10 +1,17 @@
 import { useParams, Link } from "react-router-dom";
 import posts from "../data/posts.jsx";
 import Comments from "../components/Comments"; 
+import { useEffect } from "react";
+import hljs from "highlight.js";
 
 export default function PostDetail() {
   const { id } = useParams();
   const post = posts.find((p) => p.id === parseInt(id));
+
+  useEffect(() => {
+    hljs.highlightAll();
+  }, [post]);
+
 
   if (!post) {
     return <div className="container py-5 text-center"><h3>Artikel nicht gefunden.</h3></div>;

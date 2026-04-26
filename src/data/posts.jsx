@@ -364,11 +364,169 @@ const posts = [
         <p>
           Schon kleine Anpassungen wie Abstände, Schatten oder Hover-Effekte können einen großen Unterschied machen.
         </p>
-
-
       </>
     )
-  } 
+  },
+  {
+    id: 4,
+    title: "Was ist Code Syntax Highlighting?",
+    excerpt: "So hab ich das Design verbessert: moderne UI-Optimierungen einfach erklärt",
+    date: "2026-03-03",
+    image: "/Blog-Design-Feinschliff.png",
+    tags: ["Design", "UI", "CSS"],
+    content: (
+     <>
+      <p>
+        Unter Code Syntax Highlighting versteht man das Hervorheben von Quellcode innerhalb eines Textes.
+        Dabei werden Codeelemente wie Schlüsselwörter, Strings und Variablen mit unterschiedlichen Farben
+        oder Schriftarten dargestellt.
+      </p>
+
+      <p>
+        Dieses Feature ist weit verbreitet – sowohl in Code-Editoren und Skripting-Tools als auch in Tech-Blogs.
+        Es hilft dabei, Code schneller zu erkennen, zu analysieren und besser zu verstehen. Dadurch ist Syntax
+        Highlighting besonders bei Entwicklern sehr beliebt.
+      </p>
+
+      <p>
+        Ein zusätzlicher Vorteil: In vielen Fällen gibt es einen Copy-Button, mit dem sich Code direkt in die
+        Zwischenablage kopieren lässt.
+      </p>
+
+      <p>
+        Natürlich wollte ich dieses Feature auch in meinem eigenen Blog integrieren.
+      </p>
+
+      <h2 className="mt-5 mb-3">Welche Lösungen gibt es?</h2>
+
+      <p>
+        Für Syntax Highlighting gibt es verschiedene Libraries, unter anderem Prism.js, React Syntax Highlighter
+        und highlight.js.
+      </p>
+
+      <p>
+        Ich habe mich für highlight.js entschieden. Dabei handelt es sich um eine clientseitige JavaScript-Library,
+        die sich einfach in bestehende Projekte integrieren lässt.
+      </p>
+
+      <ul>
+        <li>Keywords (z. B. <code>import</code>, <code>const</code>)</li>
+        <li>Strings</li>
+        <li>Kommentare</li>
+        <li>Erkennung der Programmiersprache</li>
+      </ul>
+
+      <p>
+        Ein großer Vorteil von highlight.js ist die Auswahl an Themes. Es stehen zahlreiche Designs direkt zur Verfügung:
+      </p>
+
+      <ul>
+        <li>Standard / Default</li>
+        <li>Atom One Dark / Atom One Light</li>
+        <li>GitHub / GitHub Dark</li>
+        <li>Monokai / Monokai Sublime</li>
+        <li>Solarized Light / Solarized Dark</li>
+        <li>Dracula</li>
+        <li>Nord</li>
+        <li>VS / VS2015</li>
+        <li>Night Owl</li>
+        <li>Gradient Dark</li>
+      </ul>
+
+      <p>
+        Ich habe mich für das GitHub-Theme entschieden. In diesem Theme werden Schlüsselwörter rot, Variablen schwarz
+        und Strings blau dargestellt – das passt optisch sehr gut zu meinem Blog.
+      </p>
+
+      <h2 className="mt-5 mb-3">Installation und Einrichtung</h2>
+
+      <h3 className="mt-4">1. Library installieren</h3>
+      <p>Öffne dein Terminal im Projektordner und führe folgenden Befehl aus:</p>
+
+      <pre>
+        <code className="bash">
+          {`npm install highlight.js`}
+        </code>
+      </pre>
+
+      <h3 className="mt-4">2. CSS-Theme einbinden</h3>
+      <p>Füge in deiner <code>main.jsx</code> folgende Zeile hinzu:</p>
+
+      <pre>
+        <code className="javascript">
+          {`import "highlight.js/styles/github.css";`}
+        </code>
+      </pre>
+
+      <p>Dieses Theme sorgt für:</p>
+      <ul>
+        <li>farbliche Hervorhebung des Codes</li>
+        <li>bessere Lesbarkeit</li>
+        <li>ein professionelles Erscheinungsbild</li>
+      </ul>
+
+      <h3 className="mt-4">3. Highlighting aktivieren</h3>
+      <p>In deiner Blogpost-Seite (z. B. <code>PostDetail.jsx</code>) fügst du folgenden Code hinzu:</p>
+
+      <pre>
+        <code className="javascript">
+          {`import { useEffect } from "react";
+  import hljs from "highlight.js";
+
+  useEffect(() => {
+    hljs.highlightAll();
+  }, [post]);`}
+        </code>
+      </pre>
+
+      <p>Dadurch werden:</p>
+      <ul>
+        <li>alle &lt;pre&gt;&lt;code&gt;-Blöcke erkannt</li>
+        <li>automatisch hervorgehoben</li>
+      </ul>
+
+      <h3 className="mt-4">4. Code-Blöcke korrekt formatieren</h3>
+
+      <pre>
+        <code className="javascript">
+          {`<pre>
+    <code className="javascript">
+      {\`const x = 10;\`}
+    </code>
+  </pre>`}
+        </code>
+      </pre>
+
+      <ul>
+        <li><code>className="javascript"</code> definiert die Sprache</li>
+        <li>Template Strings verhindern Rendering-Probleme in React</li>
+      </ul>
+
+      <h2 className="mt-5 mb-3">Ergebnis</h2>
+
+      <ul>
+        <li>Code wird automatisch erkannt</li>
+        <li>Syntax wird farbig dargestellt</li>
+        <li>Der Blog wirkt deutlich professioneller</li>
+      </ul>
+
+      <h2 className="mt-5 mb-3">Theme wechseln</h2>
+
+      <pre>
+        <code className="javascript">
+          {`import "highlight.js/styles/atom-one-light.css";`}
+        </code>
+      </pre>
+
+      <h2 className="mt-5 mb-3">Fazit</h2>
+
+      <p>
+        Mit wenigen Schritten kannst du in einem React-Blog professionelles Code Syntax Highlighting integrieren.
+        Das verbessert nicht nur die Lesbarkeit, sondern macht deinen Blog besonders für Entwickler deutlich attraktiver.
+      </p>
+     </>
+    )
+  }
 ];
 
 export default posts;
